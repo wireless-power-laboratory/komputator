@@ -1,0 +1,2 @@
+# komputator
+Ohne werd
