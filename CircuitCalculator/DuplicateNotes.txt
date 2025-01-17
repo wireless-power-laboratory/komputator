@@ -1,0 +1,572 @@
+﻿Circuit Calculator: Project Notes.
+
+26.01.2011: A means to control the large impact of numbers and properties floating in and around the thesis, including the machines.
+
+27.01.2011: Starting a notes file since now here with the database-handling code to store physical and experimental data.
+	1109: Tasks are to:
+		1) Create a class to handle all DB transactions in the project,
+		2) Have it so the database file can be inside the application directory and be accessed by the program.
+	1145: Trying a centralized approach to managing the database so that all the forms (and subforms) can access the db.
+	1445: SQLite path fixed by physical path on the computer harddrive. Not good but a short-term workaround. On disposing forms, cannot override the 
+		Dispose() method when using ShowDialog() as cannot do anything until the window is closes. Have the option of MdiContainer = true but the form
+		looks like shit. Moving on...
+	1513: Building up the Efficiency Calculator form.
+	1653: The form is assembled and now working out the nuances of the data and how the terms will shift around to satisfy the equations.
+03.03.2011: Back here after a long absence to finish this program and place a version number on it. It is a good notion to contain the 
+			calculations that go into gleaning resonance attributes, such as that discussed by Hoag.
+	1801: I am looking to place what I think I will need. Writing the new patent has revealed some data that needs to be organized.
+08.03.2011: I have finished the patent, now back here in tandem with the final mods to the P-P Model 'G'.
+	910: In thinking about the antenna towers, how are the leg-wires running to the Linz winding calculated? How does the 
+		program store experimental data about an antenna that is built using the formula?
+	1114: I've got the Linz part sorted, now designing the calculation-data interface. It should show the experimental data relevant so it can be matched, 
+		Also, how about making the calc first, saving, then showing a place for experimental data input and analysis of the discrepancies?
+	1218: I've added a slick method for storing user/session id to tag the data to be stored. Soon lunch and biking break.
+	1229: Stopping, gotta get the insert fixed and is ready. The hardcoded path sucks, there is a better way going forward. Want to spend this afternoon 
+		making the hat for the capacitor and drill the holes for the switch since it is sunny out.
+	1255: Back for another 30 minutes until exercise.
+	1323: It now stores the userid and sessionid.
+	1335: Pausing now for biking since it is sunny.
+	1444: Back now to keep moving. I have decided tomorrow I will do D's iPod and build the components for the oscillator.
+	1604: Settng up a delegate and args so that the session ID will be passed between forms.
+	1632: SessionID is being passed now. Am using the AppDomain cache to store the object value. A label and one line of code.
+	1750: Starting to lose my nut here!
+	1805: The system is now ready to be built, taking in data and customizing the storage types. Very nice indeed!
+	1816: I have set a CONTINUE HERE block on InductanceCalculator.cs. I have completed a data-saving round and what is there is functional. 
+		The real fun begins on being able to put the compendium and see how to display it. A day's work, perhaps two, and this project should 
+		be ready for its integration.
+14.03.2011: Resuming here and insuring the SessionID is passed between the forms.
+	1526: Will start by reviewing how the data will be displayed to ascertain the formatting.
+	1626: Am working on filling the stored reporting grids, what kind of data do I want to show that is helpful?
+	1644: The gridviews are filling now. I'll need to pull some old code so I can control the names of the columns.
+	1707: Inductance data stores successfully.
+06.05.2011: The technology has caught up to the intention of this program. I have the same oscillator with two different antenna radii.
+	1038: When using the same oscillator with different antenna, what is the best for identification of the data?
+	1542: Added a notepad window to aid in storage of calcualtions and interesting data. Better yet is find a way to integrate the PasteBoard app.
+12.05.2011: Returning here after working papers and how the data is exhanged between stats and pubs.
+	1444: Having sorted and added the appropriate placeholders in Draft 17, UTv 6 and thinking about handling of specifications of stored data 
+		for each of the oscillator schemes and thinking to build screens (but not in a grid). I understand this will take some hours but it 
+		feels the most effective use of my time as the experimental data from the prototypes must be managed and easy to find.
+	1705: It is very tedious but the screen is up and the controls in place. Now to connect the desired behavior.
+	1706: After break, I will return to this.
+13.05.2011: Change of plans.
+	1603: Have captured the data into Latex tables. This project is done on luxury time only.
+15.05.2011: Finishing the draft.
+	1537: Need to add how the efficiency is calculated based on Equation 11 of draft v6.1.
+16.05.2011: Draft out.
+	1308: Completing the efficiency calculator and strengthening the coupling coefficient calculator have allowed me to adjust the paper and see the 
+		real numbers. I am very pleased and want to further strengthen the calculation parameters.	
+	2338: Added a quality factor calculator palete, connected in the mutual inductance calculator and set some tooltips. Will start tomorrow working quality 
+		(and mutual inductance, if I could be so lucky--at least a start.
+17.05.2011: Inputting Eqs. 7-10 of the WH draft 17.
+	1132: Beginning with the resistive and radiative losses calc as it is the most delicate mathematically of the others.
+	1317: The resistive loss is set and what remains is the equation calculation itself.
+	1611: Resistive and spiral calc finished, but need to come to terms with curved line equations, what's not done is related to tasks along with mutual 
+		inductance--hard and requiring an integrator, part of the project currently but most difficult of pull off.
+	1615: Will take an exercise break and code up the quality calculator, then need to segue to another set of tasks.
+18.05.2011: Here with a new idea for this program.
+	952: Lately, I've been getting hit with spam from a investor website and saw new capital groups being formed. It is a good idea to get an executive summary 
+		out now. But how do I keep track of what I'm sending, when I'm sending it, and to whom is it being sent? What could be this individuals specific type of 
+		interest in the project? Now that I have more confidence, know the difficultly lies in the curvilinear spaces in the work, and am working in earnest on 
+		publications, it seems the time to work the financial angle to see what level of satisfaction I will tolerate given the pressures and responsiblities.
+	2022: Got a bit of a start but collapsed in the end. Will resume another time.
+19.05.2011: Had a wonderful sensation lying across the bed last night and came to realize wireless power in eclectic interior design / architecture.
+	1127: The inspiration for this comes from the artist Derek Anderson was working with in Logan, Utah before he died in 2003. I can't recall or find his name 
+		presently but will search until I can find this or a similar style wherein to photoshop overlay lighting without wires. This is a golden idea.
+	1129: Returning to hopefully finish the investor form.
+20.05.2011: Leaving this now for the writing of the "Featured Power" (FSX) paper.
+	943: The strangest thing is how the SQL query pulls out a "0" for docnumber when clearly it is carth001 in the database. I can find so solution presently.
+26.05.2011: Spending some time pursuing how I will assess calculations in curvilinear space.
+	1048: Specifically, this pertains to objects with curved surfaces or calculations dealing with phenomena manifesting curved.
+	1155: How about including a formula interpretor to categorize what types of calculations required?
+30.05.2011: Here to enhance the quality factor to show improvement over MIT.
+	1255: Want to check alternate interpretations of the Q-factor.
+01.06.2011: Here to work on establishing the method of solving curvilinear spaces.
+	1357: Having submitted the first paper back to WH and in lieu of the writing needed for the Robot paper, I want to sort how inductances are calculated for 
+		the sprial coil and put to bed the vb code I have obtained to help in the solution. There isn't much in the way of curvilinear but will help to aid 
+		understanding of what tools are availalbe to solve curved phenomena.
+	2059: Had gotten the spiral calculator built in two hours, last bug is the wire length. Added nice pics and source information. Need to move the tooltip event 
+		to match the other controls. One thing: if called from a different parent window (like L calc) and L calc is closed, so does the child.
+05.06.2011: Start the frequency to wavelegnth calculatior.
+	2045: For wave-based clculations and powering microrobotics receivers is the next group of math we want to tackle. Leading to #3 of:
+		1. circuits, 2. fields, 3. waves.
+07.06.2011: Adding magnetic flux density and field strength calculator form.
+	1610: Not sure how this will sort but is relevant to plots in a paper.
+	2121: Successful values for the B fields will have to somehow integrate a theta.
+	2205: Am sure theta will fall off dramatically at a distance save along the axial center with axial alignment, although would be interesting to chart theta at 
+		a specific distance 'd', hinting d could be larger.
+17.09.2011: There is a great need to ascertain the visualizations of those contained in the "black books". 
+	1039: I have attempted this numerous times in the past but have yet to arrive at a means to accomplish the delicate interaction between what is structured as 
+		solutions in the books which may contain graphical elements but which have yet to be integrated into my thinking given my specific category of 
+		research. This is a fancy way of saying I need to corral those features from the books which bear the greatest relevance in crystallization.
+	1042: Learning from past iterations, I am content with the package "ZedGraph".
+		A good place to start would be to recreate the equations from the two papers off at the publishers.
+	1100: Question--how do we capture these equations and store the new file logic?
+	1150: I have started a capture document and isolated two m-files with plots to begin.
+	1219: I have isolated where I can start with the first plot here.
+	1308: Have a successful resolution of the data lists to a plot! Looks good.
+	1648: Back now to refine the plot so that it resembles its Matlab origin.
+	1716: I have successfully duplicated the plot for Fig.10 of the first paper. Now to add a second equation for plotting.
+	1721: The only way this will all pay off is to create a full-control simulation of the Model 'G' with values for R, C, and L to be input.
+	1934: Having fun coding and a lot to think how to technically pull off the interactive organization of the project. Tired and will relax.
+18.09.2011: Awoke early to get a fresh start.
+	953: From the ease of using the ZedGraph component, I have revealed how absolutely shitty the data is from the Matlab plots including short arrays. Glad I am 
+		doing this exercise to reveal the flaws and clean this fucking mess.
+	1116: Have decided to create data-points in an excel document and load them into the plotter. This way to separate the data-taking from processing tasks. Excel 
+		reader is running well and gridview displays. In this mode, is availble for editing. Two events: one for loading, one for plotting since reader is not 
+		inherited in the session. Will want to plot the data-loads first, then assess the three-dimensional capabilities. Lastly, to create a 3D map of the 
+		transmitter vs. receiver on the tabletop.
+	1123: The three-dimensional plot (sheetplot) I desire is in pursuit of a description for a Poynting field object.
+	1125: In the present example, the receiver has two coordinates respective of the transmitter, however, data-taking only considers axial alignment, where one of 
+		the coordinates does not change.
+	1140: I have created an excel to shape an understanding of three-dimensional coordinates.
+	1244: Three-dimensional coordinates are not a problem, but plotting them I cannot. Have a surfaceplot class that will work, but I need to modify it.
+		Is this worth the time? How bad do you want to see the sheet?
+	1437: Gentlemen, we have 3D surface plot opening in a new window off the plot form! This is great, have two-dimensional plots in one form and the extrapolation 
+		using Thales' theorem for the z-coordinate. Now it is just creating a contour from a function, but need to load the data from the excel.	
+	1457: Want to finish up with writing the code and performing the data-entry for an experiment. Good idea to create the points in excel then plot.
+	1524: Forms are clean and good for working. Next step is to render from an excel file for 3D.
+	1621: Finished for the day. Still need to build the 3D from data. How can we take advantage of the function feature?
+	1800: Hate it, but I gotta quit now. Off to Belgium tomorrow. Am at the point where the program is ready to be used to construct plots from excel sheets.
+		Let the programming end and the development begin!
+20.09.2011: Sneaking in some time to develop. Want to start adding graph-manipulation routines, starting with axis limits.
+	1346: Custom controls for the plot needs consideration. Which ones are best?
+23.09.2011: Spent time understanding the nature of 3D data plots by working with the chart function in excel.
+	1137: I am leaving 3D plotting for now and resuming to work on the notion of an "electrically short" antenna, or by Kraus, John D. (1950). Antennas, an antenna 
+		as an aperature. It will pertain to a calculation discussion in the conference paper I'm sending for Belgrade.
+	1241: Today CERN annouced they have results suggesting nutrinos travel faster than the speed of light. I am adding a wavelength calculator to the form.
+	1552: Making ResonanceCalculator form more functional to include if faster-than-light is verified.
+	1615: Closing down for now.
+25.09.2011: Off to Belgrade in November--looking for many lost things.
+	1350: Next is to add the concept of antenna aperture to power delivery.
+30.09.2011: Now to add an aperture calculation.
+	807: Not sure how this affects things but want to get a sense of it as a property of the antenna.
+	848: Have shaped the calculation. It doesn't speak much, a (quarter) wavelength of 1883.65 results in 261345.76 (cm). This doesn't bear much meaning.
+27.12.2011: Have been questioned on my use of quality in the paper.
+	1527: I am here to build an equivalency check for my derivation, (and maybe some Q-factor stuff.)
+	1626: Finished. Got screwed on placing equation from Wikipedia into paper--got some explaining to do.
+11.01.2012: Have finalized the equations for the paper.
+	1057: Have included an "additive" Q equation and would like to test its performance.
+28.01.2012: Am here to set the parameters of vector visualization.
+	1902: Pursuing the (magnetic) potential vector, as well as chasing down Maxwell's other potentials.
+	0017: Have worked a lot on this, now at the point of PDEs and finite elements.
+29.01.2012: Time is passing for this old girl.
+	1812: In examining the range for PDEs, computationally speaking, I will need to build another part of the project in VS2010.
+		Will try now with this language F# to see if it will satisfy a sparse matrix, the means to compute the elliptical PDE.
+		Wish me luck!
+30.01.2012: Slowly separating the project into VS2005 and VS2010 forks.
+	1101: Here to touch up the main window. Want to also say about the ironic appearance of the meaning of the 1997 term 'fsx'; it is for this 
+		reason, the need to use F# to create the necessary sparse matrices for the elliptical PDE. Found a paper for a model of a spiral 
+		resonator which will help guide me as to the proper wave equation and excluding what is written for the power arguments, since the 
+		aperture model is suitable for high frequency, short wavelength systems.
+	2131: At the point where the solution work is recounting what I did here. Am shifting strategies tomorrow: start from the beginning and 
+		go through the writing. Have some ideas for Section 2 that I would like to sort in the Appendix.
+02.02.2012: I have to define wireless power as a "standard model of physics". Hmm...
+	1823: The electromagnetic force also has infinite range but it is many times stronger than gravity. The Standard Model includes 
+		the electromagnetic, strong and weak forces and all their carrier particles, and explains extremely well how these forces act 
+		on all the matter particles. So how "deep" should the discussion and mathematical parceling go?
+03.02.2012: Stick to a technical description with the appropriate engineering maths. I think the combo of Belgrade and IET is a good place to start.
+	1336: Let's start to shape the maths and descriptions. How can we contribute strongest to the state-of-the-art?
+	1438: Touching up the program. How about trying to calculate a magnetic vector potential to get an idea of what it's like? Yes?
+	1439: Will go out for a walk in the snow, then back for some fun!
+	1728: Back and have some ideas:
+		1. Calculate equations from Belgrade paper,
+		2. Include the quality from IET,
+		3. Build a figure about beam (width) trajectory to show power levels at different positions.
+	1900: Have built a mathematical proof document to keep track of the 25 equations, will solve each as necessary.
+	1952: In earnest for making a tracking system for the equations and how they are proofed.
+	2033: The first five forms are setup, now to input the calculation schemas.
+	2139: First equation went screwy and exploded. Lots of time spent in setup of the windows. Onto the next tomorrow.
+04.02.2012: Have a plan: reading Kraus' "Antennas".
+	1301: Focusing here on the finite solution of those equations not only in the Belgrade paper but those operations - 
+		integrals, differentials, vectors (unit) - which also appear as common antenna equations. I see by this strategy 
+		a very thourough treatment in the short term.
+	1706: Got a line for a numerical method like what I did for the antennas part. Am going there to explore it.
+12.03.2012: Must do the computation/data part and finish the work.
+	1802: Here to add the antenna computations as content for tables in the thesis. Will need to assess the Neumann thing too....oh boy!
+		Starting with radiation resistance, simultaneously the most useful and useless concept in antenna theory.
+16.03.2012: Here to finish the Litz winding addition on the inductance calculator.
+	1133: Finishing Litz added to the calculated loop inducatance.
+	1248: Litz pieces added to the inductance calculator.
+	1252: Next to do resonance frequency differential and system resonant frequency.
+	1320: System resonance frequency and differential finished.
+	1423: A redesign of the main screen for depiction in the dissertation.
+	1551: Linz winding!!
+	2103: Now ready to bulid up a calculator panel for a mutual inductance formula by F. Grover.
+	2257: Mutual inductance value obtained! Now checking coupling coefficient.
+	2311: Turning out results that look so far solid. Good going! Now go relax.
+19.03.2012: Here to adjust the ohmic resistance calculator for the quality factor data.
+	1340: Altering the equation from Kurs.
+	1419: I have the ohmic resistance now as well as the quality factor.
+	1448: It led down and interesting road...
+	1454: Well, now need energy stored.
+	1520: Finished with energy stored.
+22.03.2012: Here to finialize the thesis before the first printing.
+23.03.2012: here
+	2026: Adding a mutual inductance factor table viewer post haste!
+27.03.2012: Here
+	1548: Adding calculation for the B field.
+	1551: Already wrote it...done!
+28.03.2012: Here to finialize the calculations for the thesis.
+	1018: Walking through the calculations for those wave characteristics found in the J.D. Kraus "Antennas" book.
+	1558: Done with the calculator and generated the final data table to the thesis. Thanks for 16 good years!
+31.03.2012: Adding some more energy equations.
+	840: Adding magnetic energy stored.
+	1241: Is very fun working on this, am now working with sines.
+	1246: Finished here for now. Am working on the final two days of the thesis before posting next week. Cheers!
+04.04.2012: Now that the thesis is done, here to work on the integrator...and thinking about making a mobile version.
+	2205: Got the Simpson integrator to work and started on a first-order ODE solver.
+05.04.2012: Moving the integration calculator.
+	1205: Some issues with the compliation of the integral with wider limits.
+	1208: Is working now.
+06.04.2012: Want to expand...
+	1812: Creating a mobile version. Not feasible given the necessary time and limitations of the available processor. 
+		Would be good for Windows Mobile 7 and later.
+18.05.2012: Here again.
+	1154: In tandem with the Sharepoint project "Einstein", how does my experience here relate and what can I achieve? I think 
+		the point would be to attract people to the website to use the app. Sharing information about wireless power is also a 
+		good idea. I maybe going too structural insisting on Sharepoint, how about getting atarted with a rudimentary model?
+	1702: A good first try composing this project in Silverlight: have gotten the mutual inductance calculator to function with a 
+		popup window for the alpha-value table. Left to do is get the popup details worked out.
+24.05.2012:
+	1150: I will have to fork this project to VS2010 to approach the numerics problems I need to address.
+27.05.2012: Have exhausted possibilities, examing physical characteristics in search of a proof.
+	1851: Have been to VS2010, Comsol, Derive, and back again. I have my working domain.
+	2128: Have gone all around the circle and back here. The physical is the place to begin the description.
+	2209: How about visualizing the magnetic field in three-dimensions between the transmitting and receiving loops?
+	2254: Around again. Am setting up a separate project to start the proofs.
+	2332: And now for something completely different, something to inspire forward movement.
+29.05.2012:
+	1648: Break now and working exclusively on writing up the Ph.D.
+
+Circuit Calculator, Mathematics project notes: The antenna and its emissions.
+19.09.2012: Have revisited this project, having acquired the Ph.D. a few days ago, to set up what the mathematics proofing required in the necessary corrections.
+	1643: After two days of boredom and lots of time to work, here I am.
+	1653: Will start with the basic tools needed for computation in the "Mathematics" project.
+20.09.2012: Have started the focus on integration tools. Added pdfs of CodeProject code which explain some computational concepts in code.
+	915: Resuming with a project I found for lambda calculations--lambda in the C# sense.
+	920: Got a line on PDFs using nested lambdas...hmm.
+	951: Got some good runs on these lambdas for Simpson and Gaussian integration. I think this is the way forward for electromagnetics.
+	953: Breaking up the tests into each specific form of numeric task.
+	958: Have finished single integration techniques, probably will return to add some more complex methods to the library.
+	959: Next onto a double integration method.
+21.09.2012: Continuing from yesterday.
+	808: Onto the double integration method.
+	837: Adding an arithmetic Fraction class which can be overloaded with any expression.
+	843: Interesting result here: when putting double equal to a fraction, such as 45/8, the value is truncated to 5. When using the fraction class to 
+		represent 45/8, the value is represented correctly.
+	859: A lot of stuff going on in the curvature, point center/forward, and surface area!
+	920: Heavy shit, this lambda code! But very groovy indeed.
+	1357: Lambda surface area test sorted and learning interesting things.
+25.09.2012: Kinda chaotic trying everything at once.
+	1446: Looking at duplicating the Matlab antenna solution to find the output power of the new medical oscillator.
+	1447: Be advised, not taking notes until I have something suitable integrated.
+26.09.2012: Back again.
+	1332: Spent the last half-hour searching through reflector for a Mesh class from UnityEngine. Too many extern calls to be useful.
+	1333: Going now to a primitive version of Matlab and see what the functions in the script represent. The book could also be a good source.
+	1358: Going to try the native WPF 3D programming technique to generate the necessary triangles for the object shape of the antenna.
+	1515: Now making a (Monkey-Man) mesh which has some numbers. It is only a cylinder.
+	1527: The slices method of making (monkey) mesh seems pretty good as well. Maybe a secondary way of generating mesh. In using this method, the shape 
+		the loop (ring) will need to be created. Maybe a xaml project is a place to mock it up.
+	1558: Will spend the remainder of time today on seeing if I can generate a loop in the xaml.
+27.09.2012:
+	858: On the walk home yesterday I was thinking that the wire consisting a coil is in essence a piece-wise cylinder of length (unity) 1. Instead of 
+		creating the object, create the mesh from the shape up.
+	1328: Here staring intently at the mesh.
+	1631: Have gotten some good indicators started. It will take time to get this worked out.
+	1632: It can be productive to apply the algorithm sequence for rwg1.m going forward.
+28.09.2012: You have to decide what is important for you.
+	842: Have decided to continue doing my work and see how and where this goes.
+	913: Seems each mesh object is suitable to take forward to compute using RWG method.
+02.10.2012: Been round and round here.
+	1346: Finally got Matlab 6.5 with PDE on a VM to be used anywhere. Now to sort the computational sequence...what can I say about it? What can I say about 
+		the energy (and the type of energy) transferred? Can the transmission be quantized?
+	1355: Tried running old code in the new Matlab 6.5 and thinks *.mat file is corrupt. Will have to build a new mesh from the instruction sequence in the 
+		thesis.
+	1406: It might be wise to also capture the processing sequence.
+03.10.2012:
+	1612: Several machines armed with Matlab 6.5 w/pde and have run through three rwg scripts. What to do next I am waiting for.
+04.10.2012: Continuing as this is my work.
+	835: Thinking of how the numbers output from the Matlab code should be captured/routed.
+	837: Where do we step out and step back in?
+	919: OK. Let's say the computation carried out by Matlab65 is "parceled out" as the interest in the short term are the antennas being profiled. So, under 
+		such a consideration, the project is experimentally-based in that it is interesting to compare subtlties in the Model 'G' antenna while facilitating 
+		an understanding of the phenomenon and the mathematics which represent it.
+	922: How to compartmentalize the data from each run?
+	925: What are the properties of the physical model? 
+		a. Does the oscillator function by accelerating electrons in the antenna?
+			1. What are the velocity changes given the (switching) magnitude in the IRFZ44Ns? [POWER]
+		b. Can it be shown the polarity on the antenna is real?
+			1. What are the switching magnitudes in the IRFZ44N? [POWER]
+		c. Is the antenna oriented in terms of Pi, given the third wire?
+			1. Advanced concepts from first paper and Kraus. [RADIATION]
+		d. How can all this be quantified / quantized?
+	945: Create antenna and oscillator objects like gears.
+	1001: Seems what I am thinking of is similar to the StoreExperiments winform I made. 
+	1310: The Antenna class, based on the Gear object, and the AntennaProperties class for calculated parameters is the current architecture.
+	1510: The project is now calculating, to within that from the CircuitCalculator WinForm, the values of both the Tx and Rx antenna.
+	1605: Have created test cases for a transmitting and receiving antenna, the basic parameters such as inductance and resonance frequency.
+	1608: I don't think a separate class for the parameters are necessary. What about the values output from Matlab?
+	1627: Still have yet to determine how the outputs from Matlab get into the application.
+05.10.2012:
+	1045: Want to add the different possible leg-lengths in the case of the medical WP apparatus.
+	1354: Getting differences in inductance between the mods to the transmitter antenna and the ordinary reciever antenna calculation. Tired and buggy today and will see how far this goes.
+	1414: Problem was using input dimension of cm instead of mm. Everything checks out. Want to store the resonance properties somewhere.
+	1446: With a successful set of codes, the differential between Tx and Rx is shown to be 798Hz for the (medical) WP unit.
+	1850: Touching up the tests and seeing what behaviors can I observe by manipulating antenna parameters. The Matlab figures will have to be included next.
+	2053: Perpetuating the code to all machines.
+	2121: Added circuit parameters in preparation for the MOSFET data keeping.
+06.10.2012:
+	1332: Found an error in the calculation of inductance for the reciever. It had it with a half-turn loop. The differential frequency is 6361.66 Hz.
+	1352: Can be pursued further at: http://www.ehow.com/how_10055912_calculate-frequency-bandwidth-wire.html
+08.10.2012:
+	1356: Adding in the data acquired by the mesh computation in Matlab to the C# object.
+	1403: It is interesting understanding what options there are to more closely match the resonance frequencies.
+	1422: Now at the question of how to integrate Matlab and its output to the project.
+	1602: Have installed NEC on the VM so I can get a very deep understanding of computational electromagnetics. Very cool!
+09.10.2012: Emphasis on concept is the recipie for success.
+	1002: From reading the NEC theory manual intersected with the consideration of the medical wireless power device yields an ambition that solves for a wire and for a surface.
+10.10.2012:
+	1017: Have assessed the properties of the physical model of the antenna. Remains to see how to include specific data yielded from the efield1, 2, and 3 Matlab outputs.
+	1503: Am working on a method to compartmentalize the Matlab-generated data on the AntennaParameters object using the Dictionary.
+	1553: Have sorted the class structures for the data. Will now check the formatting of the data to insure its correctness.
+	1558: Data looks good, missing the operator * from the E, H, and Poynting field values.
+	1609: To contain the value operator *, it is included in the class initialization in AntennaParameters since I cannot carry it as a double type. Hopefully * is a standard!
+	1613: Still need to include W and U from the Matlab output data.
+	1614: Be advised, in the watch, value real and imaginary are reversed because of alphabetical sorting order.
+12.10.2012:
+	812: Some reflection last evening about the role of the MOSFETs in the propagation and photon-emission hypotheses. How can I simulate / sort the equation of behavior?
+	1448: Have found TINA from TI which seems to be a MultiSim-like environment, but free. Still starting to find the wear to work it out.
+	1527: Still pecking about. Found some equations of the n-MOSFET online.
+14.10.2012:
+	1158: I found a note in Hertz "Electic Waves" about peculiar properties of the spark-gap and its effect on wireless. Apart from the ultra-violet light, the action of creating 
+		an electric oscillation--such as assumed in the reading--could partially intervene in the total manifest result of the phenomenon. In other words, while the antenna is facilitating
+		the action, the circuit is creating the oscillation. However, in the present case, these two sometimes disparate components are irrevocably linked.
+	1204:...which begs the question, how to come to terms with these?
+	1319: Working with the simulation of the MOSFETs to (eventually) model the behavior equations.
+16.10.2012:
+	846: Having put myself and the work on the timeline on Wikipedia, the inspiration to push my work forward is becoming irresistible.
+	849: Upon a progressively deeper reflection on 'G' and the capturing of antenna parameters in the hope of encapsulating the phenomenon I saw during my migrane, I am thinking of 
+		what kinds of models can be represented and how are they cataloged? I do enjoy the cramming in this VS project, perhaps a simple drawing with a model number would be a good 
+		starting point.
+	856: For this, SmartDraw 6 is the place to begin.
+	900: Well, that's out, need an alternative to get started. Powerpoint?
+	939: I've got four models and some concepts in the renamed project "AntennaCatalog".
+	958: It could now be interesting to calculate for the intensity of--for example--B in terms of those illustrated in the AntennaCatalog\Concepts\images folder.
+	1002: Starting with expression D as a model to calculate as it seems feasible with an asymmetric setup (moreso than the symmetric setup). Reason is the energy is designed to flow in 
+		one direction. The reflection coefficient is the last thing to consider in this expression.
+	1104: Getting the BS field calculations for the loop, but finding a disagreement with a calc at a distance from the loop.
+	1138: Suggest to build a symbolic compiler for fractions to avoid wasting time clarifying if a program calc is correctly formatted.
+	1348: Have gotten the controls built for the symbolic formatter, now to set the compilation.
+	2013: I noticed that the material conductivity is not in the Biot-Savart formula.
+	2241: Just finished an incredible run with Comsol regarding Expression A. With a disk at the center, the magnetic field goes off the chart.
+17.10.2012:
+	1318: Calling the new component a (coronal) accretion disc. Usage because of the collection of rotating magnetic charges (do these exist?) around the center (of the loop).
+	1324: Here is the Wikipedia on the concept: A magnetic monopole is a hypothetical particle in particle physics that is an isolated magnet with only one magnetic pole (a north pole 
+		without a south pole or vice-versa). In more technical terms, a magnetic monopole would have a net "magnetic charge". Modern interest in the concept stems from particle 
+		theories, notably the grand unified and superstring theories, which predict their existence. Nevertheless, it was pointed out by Pierre Curie in 1894 that magnetic monopoles 
+		could conceivably exist, despite not having been seen so far.
+	1327: Setup to speak at EUROCON, a platform to speak about this discovery.
+	1333: Created Expression F to cover the scenario.
+	1353: Check into niobium-tin / titanium wire.
+	1402: For electrical conductivity, it is achieved by phonon oscillation: In physics, a phonon is a collective excitation in a periodic, elastic arrangement of atoms or molecules in 
+		condensed matter, such as solids and some liquids. Often referred to as a quasiparticle,[1] it represents an excited state in the quantum mechanical quantization of the modes of 
+		vibrations of elastic structures of interacting particles.
+18.10.2012:
+	824: Spent last evening working on the Comsol model for the inclusion of an accretion disc. Happy to say results were positive and sets a tone for the paper.
+	1514: Thinking about the Hall Effect sensor and how to phyiscally measure the magnetic field at the center of the loop for confirmation with the theory.
+20.10.2012:
+	1928: Better idea is to use the laboratory equipment you already have instead of worrying about the exactness of B at a given point in the field geometry.
+21.10.2012:
+	2006: Ran the experiment using the cable, RMS to DC adapter, and voltmeter to set the postioning of the relative energy contained in said.
+23.10.2012:
+	1335: From the paper for Eurocon 2013, how can I calculate my hyperbolic field object theory?
+	1344: Starting to sketch the mathematical process; nice that System.Math contains cosh.
+	1359: The equation of a circle is x^2 + y^2 = r^2 while the equation of the hyperbolic here is x^2 - y^2 = 1.
+24.10.2012:
+	1301: Have started the triangle type trignometric description of the field object. Probably not ready by paper deadline, but can gloss over until the final version after the conference.
+30.10.2012:
+	812: Pushing on with the paper, although there are many unanswered questions. There is time to sort these concerns.
+31.10.2012:
+	1018: Have discovered a scientist in early electrodynamics named Larmor which came up with the acceleration and emission of radiation of "virtual" photons.
+	1020: I see the term "virtual" photon (particle) is orchestrated around the idea that otherwise it violates special relativity, whcih could be the disagreement between Larmor and Einstein.
+	1058: I see some light in the disc "converting" (creating) more real photons from the virtual ones, given experimental evidence of a shift in the boundary falloff from 1/r^2 to 1/r.
+05.11.2012:
+	1024: How do I encapsulate my theory? This is the driving question since submitting the conference paper.
+06.11.2012:
+	1454: Have gotten scilab 5.3.3 to talk to this project. Now to see if the (Matlab-syntax) antenna algorithm will run is the next step.
+07.11.2012:
+	849: Future paths are set.
+	850: Had success with Scilab 5.3.3 and 5.4.0 in 32-bit form. There are differences between the commands in Scilab from Matlab, so some alterations of the 
+		antenna code will have to take place before "script" files can be loaded into the program. Am using a text-reading component to facilitate the load of commands to Scilab.
+	857: First immediate problem is need a newer mesh (matlab v.6) to be imported into Scilab.
+	1022: Cannot get this Matlab 6.5R13 to create v6 meshes. Will try on higher Matlab on other computer.
+	1110: Will create a mesh at home on lunch to see if I can get these scripts to run sooner than later.
+	1319: Have built a v6 and v7.3 version of the loop mesh. This time, radius is unit quantity 1 with thickness of 0.05.
+	1321: Gotten past the version errors! :-) Now need to sort the scilab syntax from the matlab usage.
+	1422: Although operational, there is a LOT of work to convert to scilab syntax. Will investigate minor chance of Matlab integration.
+	1501: Looking at a significant investment of time to continue along the matlab/scilab integration path, calling haitus.
+08.11.2012:
+	902: Although there is a haitus on the matlab/scilab parle from this project, still need to focus on qms/medical device, e.g., wireless power operating around humans research 
+		for the 2014 project.
+	903: What to do next, organize the information? 
+	932: Feeling a bit blank on the subject or what I should do now.
+15.11.2012:
+	1011: Have been reading Larmor and have decided to use the aether POV on solving for H. Simply pursuing the theorem for now.
+16.11.2012:
+	832: Have seen the entirety of the model aligned with the ultimate goal(s). Would be nice to sketch the function mathematically in "The Theorem" project.
+	838: Added class "Toroid" to indicate the inverse of the antenna object.
+19.11.2012:
+	1602: Adding Air-Core calculator to the Windows form project.
+20.11.2012:
+	1042: Set an oscilloscope probe to the (+) line and saw the oscillation pattern. Steady as a "shouldered" gaussian or sine whose function I want to plot here to capture the data.
+22.11.2012:
+	1431: To keep busy, adding textual input to the integral calculator.
+	1544: Done with that, back snooping the Mathematics project.
+	1609: Coding inductance calculator tests as a test rather that through the WinForm. Enjoying it.
+23.11.2012:
+	827: Will see if I can sort a series of tests for different calculations of inductance. Problem is enums and changes the program makes depending on which is selected.
+	958: Having a good day bringing over the resonance checks into the test framework. Learning more about how to represent data in my collections. Soon out, though, and to the train for Prague.
+	1043: Out of here in 30, a lot of work required on ordering of loop and spiral inductance calculations. Leaving this project that doesn't build :-( for lack of time.
+26.11.2012:
+	924: Here to continue working on improving the calculator. Noticed the ESA (jerk-wads) equation proofs which went unfinished.
+	1044: Inductance, capacitance, and resonance tests written and functioning well. Now to discern how to catalog a series of equations which contrast results for an absolute sense of "correctness".
+		This will be quite relevant when contrasting Larmor with Einstein et. al.
+	1050: For the time being, the capacitance is always translated from a lumped component. It could be interesting for parasitic capacitance to be included to match the value observed on the counter for 
+		a particular model, compared with what is calculated. A specific tolerance of error in % should be adhered to.
+27.11.2012:
+	1331: In pursuit of the presentation lecture I will give in two weeks, setting up calculation parameters for mid-range energy storage equations.
+	1418: Since the MIT equations are completely worthless (written so they are nonsense and cannot be checked, such as Eq. 1 from "The only two things you need to consider..."), am working with the 
+		Scilab interfacing to calculate where I don't wish to render it in C#.
+	1947: Reorganized the project and got a FieldObject type to contain the complex properties. Will try to get the integration integrated next.
+	1958: Had fun tonight learning some new skills. Night.
+28.11.2012:
+	1415: A new plan in action. Coding only at the office and thesis corrections, leading to a minimum of 2-3 papers, in the evenings--until done.
+	1543: Feeling it now. More integrals are needed and some matrix/vector operations in tandem would be cool.
+	1654: Got the perfect test case for certification of the device. Works with some default values. Now to calculate what are the actuals.
+	2003: An open point is the calculation of energy in the near-field, the proximity of the metal disc containing absorbed planar charges, propagation into tissue where theta = ~90, etc, etc.
+02.12.2012:
+	1047: Have gotten the medical device charted and cleaned the antenna code. Am leaving this now to work on the gear mechanism project until it is at a stable stop-point.
+12.12.2012:
+	1554: Working on more tests on particle level to extend E class. Where should I keep the fields E, H, B?
+13.12.2012:
+	842: What would Dr. Victor Frankenstein do?
+18.12.2012:
+	1336: Keep focused, that's what.
+	1512: It would be fun to see if I can implement a complex solution like the electric (and magnetic) field values given a set of inputs.
+	1513: Have a set of links to get started on computing the field values. Would be a good relaxing, meditative kind-of-thing.
+	1802: Working through the pieces necessary for the magnetic field. Like creating a maze from the old days...
+	1829: Got some groovy code written and some output. Gonna get something to eat.
+	1840: I think I got the curl structured up! :-)
+22.12.2012:
+	1207: Worked with some very beautiful expressions in complex numbers for the fields. Was a great implementation.
+26.12.2012:
+	1413: Have found a way to alter the framework of the discussion of wave emissions in the device. The device is explicitly designed to emit to the disc and not into free-space. Therefore, 
+		calculations of field strength H and flux density B can only be discussed on the periphery of the antenna.
+	1710: Getting some weird numbers for H on a B on the order of 10E-5 (gauss).
+	1917: Got a windows form on the circuit calculator to store machine data, about time!
+02.01.2013:
+	1408: Here at the office and checking out the machine data form, feels like I'm back around at the beginning again.
+	1416: I have noted that the medical device implementation needs a phase input from the user before (calibrated) emissions are possible. A function of mutual inductance from the body I would think--
+		the part of the body in contact with the disc (as a function of the loop) and the legs of the antenna (as a function of antenna leg legth) coupled to the appendage grasping it, making a complete 
+		circuit with the neuronal cells.
+03.01.2013:
+	1850: Having written the calibration into the patent, now seeing what the equation representing it will look like.
+	1942: Have been paying attention to the antenna phase and have a pattern to calculate from. Getting a headache, night.
+04.01.2013:
+	1116: Here to shape the equations of operation, then to some drawings of how they are scoped, and then to completing the patent draft, then to published paper.
+	2118: Have been experimenting with implementations of FFT to solve equations.
+	2139: After some thought, I have "shaped" the ecosystem of the equations for the medical patent/paper works. Now to start writing and pick from the ecosystem as required.
+05.01.2013:
+	1849: Have gotten the drawings in the patent and some good sections of writing done today. Will continue with this strategy and fill in the paper too where it seems right.
+	1941: Working on photoshops now too.
+07.01.2013:
+	1042: Back at the office today and we will see what gets done.
+	1323: Still have a portion of the original Maxwell equations in my head--a good thing.
+10.01.2013:
+	1437: Looking now to solve for the magnetic potential (and field mapping--from the EuroCon2013 paper) as a next step forward in mathmetizing the theory. Am building up a toolbox 
+		to solve PDEs (and shape an understanding thereof--including ODEs) to be certain I am solving the fields in the correct manner.
+13.01.2013:
+	1907: Having met up with the 2002 M.E. has put me on track. Print "On dynamical..." by Maxwell, read and address the two big problems in the corrections to the thesis:
+		1. How are Maxwell's (vectorized) equations used in your thesis?
+		2. What is the purpose of your thesis?
+	From that all the remainder should easily fall into place.
+15.01.2013:
+	947: Starting with authoring the solution algorithm then integrating the second (vectorized) Maxwell equation B = (del) X A.
+	1035: IDEA--Focus the application of the solution of Maxwell to a problem space, such as the "cylinder" between two antenna, create the equations of the space following page 8 
+		and 9 of the "wighted residual" document in the PdeToolbox.
+		However, there are many applications in which the domain discretization into quadrilateral elements or their three-dimensional counterparts creates difficulties. In these cases triangu-
+			lar and tetrahedral elements for two- and three-dimensional problems are used. It is not possible to choose an element-based coordinate system for triangular elements in which limits 
+			of integration remain between −1 and +1. Therefore, the described Gauss–Legendre quadrature is not a suitable method for such elements. However, this problem can be resolved using
+			properly defined “area coordinates” in appropriately selected triangular master elements.
+	1040: Look for the book by Zienkiewicz and Taylor (1994) for a detailed trieste on the FEM subject. For now use, RWG?
+	1546: Have started the new mesh, from the POV of the field object: Tx is object j, Rx is object k, and the field is object n.
+	1639: Putting together some starting points for the components which will eventually consist the computation.
+25.01.2013:
+	941: Am incorporating the calculation for the "golden" ratio 'R' for a magnetic loop in pursuit of the new collaboration paper with NXP.
+	1047: Have sorted a direct application of my magnetic loop ratio notion to a RFID problem! :-) Very super, super duper!
+	1455: Have extended the application to match that of an existing system used in RFID. :-) Very cool.
+	1501: What would be groovy is an experimental proof of the hypothesis...outside of the machine I have already built.
+28.01.2013:
+	1257: Have installed elliptic integrals. Now to setup tests.
+29.01.2013:
+	848: Have given some serious consideration to the geometric layout of a B field of "magnetic" (ratio) loop. Have some good thoughts on it and would like to capture it for a mathematical 
+		proof. It would be interesting to write tests around a figure.
+05.02.2013:
+	945: Am here to start mathematizing the compoments for the paper: the Hbar projection and B-field geometry.
+	955: Because of the lack of information on calculating Poynting vector for plane waves, will need to disassemble that from the Matlab code here and put it in as such.
+	1008: Am using the file efield1.m as the foundation to extract the solutions.
+	1014: Need to extract value omega, eta_, c_ from current.mat and j from something else.
+	1031: Because of the confusion, ideal to load the files in the original Matlab to identify the values coming from the PDE toolbox, will need to bring superdrive here and load the VM.
+	1256: Am taking a pause now to put in the Budda box, the Medical 'G'.
+11.02.2013:
+	1500: Will try to resume where I left off.
+	1602: Have downloaded some docs on solutions to Poynting, they are added into a new "docs" folder in the Mathematics project.
+12.02.2013:
+	912: Thinking of changing it up and working on the B field for the shape in the ratio paper. Don't feel like hooking up the SD right now.
+	1025: Taking a look at the Poynting computation from the point of view of the antenna helped to clarify the algorithm's structure.
+	1027: Stopped since I need to examine the computational recipie.
+	1047: Have reorganized the Mathematics project for greater focus and clarity. Have to get a portfolio generated soon.
+	1307: Staring intently...
+	1400: Organized namespaces in the Mathematics project, now going through the test cases.
+	1612: Have gotten some good traction on sorting the field problems from the antenna problems. Now can focus on how each value is calculated.
+	1614: 'H' in terms of A * m-1, how long is the projection measured?
+14.02.2013:
+	1019: Am back implementing what I came up with during the past two days on thesis corrections. Getting the flow nicely here now.
+	1337: Returning numbers from the Larmor formula and photon density, very small numbers but numbers nevertheless. :-)
+	1339: Want to get the Poynting finite solution I found implemented next! Probably with some tunes too.
+	1532: Have a good set of numbers to describe the antenna suitable to the thesis corrections. Getting ready to slack soon.
+15.02.2013:
+	1016: Have tested and integrated the LambdaNumerics class with tests, in the Dojo code block. Bringing it here to use as a set of tools for the research.
+	1039: Integration finish with a partial classes called LambdaCalculus.
+	1051: Have cleaned and reorganized the project. Is looking good and ready for those parts of the thesis when/where they will be needed.
+	1058: Lightened project now.
+16.02.2013:
+	1934: Project is fully integrated and a great toolbox. :-)
+19.02.2013:
+	1418: Have gotten section 1.1.1 and 1.1.2 sorted in the thesis. Need to start with the theoretical section 2 but must sort the mathematical flow of it and those computational 
+		choices leading up to it.
+	1420: Can I prove the existence of Maxwell's displacement current by what I saw during my migrane?
+	1936: Got the theory from the model drawing to photon emissions including how the "field object" is demarcated in the thesis. :-)
+20.02.2013:
+	1540: Have demarcated the field object as a displacement "current" (E,B) called Hbar, or projection. The surface is denoted by curl(D).
+	1757: Adding the photon calculations which originally appear in the corrections on p.24
+		An FM radio station broadcasts at a frequency of 98.1 MHz. The power radiated from the antenna is 5.00x10^4W. How many photons per second does the antenna emit?
+		Answer: 7.69x10^29
+		Please show your work to get the answer
+		Energy of the photon:
+		E = h f = 6.63e-34 x 98.1e6 J = 6.50e-26 J
+		--M.E. = 6.63e-34 x 4.5E5 = 2.9835e-28 J
+		# of photons per sec:
+		Power / photon energy = 7.69e29
+		--M.E. Power = 4.95 / 2.9835e-28 = 1.6591e28 * s^-1.
+	1759: Implementing these in the Antenna class.
+	1830: Done, will now add Hbar into MagneticFields class.
+	1850: Done but not working with loop ratio correctly. What units is D in?
+23.02.2013:
+	1452: Here to link Matlab plot from thesis to the calculation of coupling coefficient over a distance.
+	1518: I successfully retrieved the required data and made a new plot. A good toolset here, it has proven itself! :-)
+08.04.2013:
+	1044: Here to fix the windows application since using it for a new antenna design for the patent.
+	1158: Have modified the inductance calculator. One thing: I have shown that a distributed (dimensional) antenna can power a lamp with only an inductor while missing the capacitor from its oscillator!
+
+	-- STOP WRITING HERE --	IS THIS A DUPLICATION OF THAT IN THE CIRCUIT CALCULATOR PROJECT?

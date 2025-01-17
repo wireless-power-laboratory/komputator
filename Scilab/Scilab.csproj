@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CBC1B640-D143-428C-A49A-6B2C307CB064}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Scilab</RootNamespace>
+    <AssemblyName>Scilab</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scilab.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScilabWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Antennas\loop\current.mat" />
+    <None Include="Antennas\loop\impedance.mat" />
+    <None Include="Antennas\loop\mesh1.mat" />
+    <None Include="Antennas\loop\mesh2.mat" />
+    <None Include="Antennas\loop\mesh\loop1\loopA.mat" />
+    <None Include="Antennas\loop\mesh\loop1\mesh1.mat" />
+    <None Include="Antennas\loop\sphere.mat" />
+    <None Include="em_general\EM-Chapter_1.pdf" />
+    <None Include="em_general\ewaves\movies\grv1frame.mat" />
+    <None Include="em_general\ewaves\movies\grv2frame.mat" />
+    <None Include="em_general\wirelesspower\December Experiments\hs_err_pid5416.log" />
+    <None Include="em_general\wirelesspower\Freq_vs_evanescentRegion.asv" />
+    <None Include="em_general\wirelesspower\Impedence_Spectrum.asv" />
+    <None Include="em_general\wirelesspower\Power_Spectrum.asv" />
+    <None Include="em_general\wirelesspower\Science Paper 2010\Conical Helices\spiral_with_logrise.asv" />
+    <None Include="em_general\wirelesspower\Science Paper 2010\Conical Helices\template.asv" />
+    <None Include="em_general\wirelesspower\Science Paper 2010\First Plot Results Sheet.nb" />
+    <None Include="em_general\wirelesspower\Science Paper 2010\Power_over_distance.asv" />
+    <None Include="em_general\wirelesspower\Science Paper 2010\Summation_of_Harmonics.asv" />
+    <None Include="em_general\wirelesspower\Science Paper 2010\Varying_voltages_over_two_meters_range.asv" />
+    <None Include="em_general\wirelesspower\Spiral_Cavity_Resonator.asv" />
+    <None Include="em_general\wirelesspower\temp\Figure 2.sdr" />
+    <None Include="em_general\wirelesspower\temp\Figure 3.sdr" />
+    <None Include="em_general\wirelesspower\temp\Figure 4.ppt" />
+    <None Include="em_general\wirelesspower\temp\Figure 5.sdr" />
+    <None Include="em_general\wirelesspower\temp\Figure 5_Rx.sdr" />
+    <None Include="em_general\wirelesspower\Tx_Spiral.asv" />
+    <None Include="em_general\wirelesspower\Varying Voltages at Two Meters.asv" />
+    <None Include="em_general\wirelesspower\Varying_Voltages_at_Two_Meters.asv" />
+    <None Include="em_general\wirelesspower\Varying_voltages_over_two_meters_range.asv" />
+    <None Include="mesh\loop1\loopA.mat" />
+    <None Include="mesh\loop1\mesh1.mat" />
+    <None Include="mesh\loop1\thisModel.m" />
+    <None Include="mesh\loop3\loopMesh.m" />
+    <None Include="mesh\loop3\loopMesh1.mat" />
+    <None Include="mesh\loop4\loop4Mesh6.mat" />
+    <None Include="mesh\loop4\loop4Mesh7.mat" />
+    <None Include="mesh\loop4\unitMesh.m" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Antennas\loop\efield1.m" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Antennas\loop\efield2.m" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Antennas\loop\efield3.m" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Antennas\loop\impmet.m" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Antennas\loop\mesh\loop1\thisModel.m" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Antennas\loop\rwg1.m" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Antennas\loop\rwg2.m" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Antennas\loop\rwg3.m" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Antennas\loop\rwg4.m" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Antennas\loop\rwg5.m" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Antennas\spiral\Rx_Spiral.m" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Antennas\spiral\Tx_Spiral.m" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="commands\rwg1.txt" />
+    <Content Include="em_general\ewaves\ab.m" />
+    <Content Include="em_general\ewaves\abadd.m" />
+    <Content Include="em_general\ewaves\abadd2.m" />
+    <Content Include="em_general\ewaves\abp.m" />
+    <Content Include="em_general\ewaves\abp2.m" />
+    <Content Include="em_general\ewaves\abz.m" />
+    <Content Include="em_general\ewaves\abz2.m" />
+    <Content Include="em_general\ewaves\addbwp.m" />
+    <Content Include="em_general\ewaves\addbwz.m" />
+    <Content Include="em_general\ewaves\addcirc.m" />
+    <Content Include="em_general\ewaves\addline.m" />
+    <Content Include="em_general\ewaves\addray.m" />
+    <Content Include="em_general\ewaves\asinhc.m" />
+    <Content Include="em_general\ewaves\binomial.m" />
+    <Content Include="em_general\ewaves\bkwrec.m" />
+    <Content Include="em_general\ewaves\blockmat.m" />
+    <Content Include="em_general\ewaves\brewster.m" />
+    <Content Include="em_general\ewaves\bwidth.m" />
+    <Content Include="em_general\ewaves\c2p.m" />
+    <Content Include="em_general\ewaves\chebarray.m" />
+    <Content Include="em_general\ewaves\chebtr.m" />
+    <Content Include="em_general\ewaves\chebtr2.m" />
+    <Content Include="em_general\ewaves\chebtr3.m" />
+    <Content Include="em_general\ewaves\Ci.m" />
+    <Content Include="em_general\ewaves\Cin.m" />
+    <Content Include="em_general\ewaves\circint.m" />
+    <Content Include="em_general\ewaves\circtan.m" />
+    <Content Include="em_general\ewaves\contents.m" />
+    <Content Include="em_general\ewaves\d2r.m" />
+    <Content Include="em_general\ewaves\db.m" />
+    <Content Include="em_general\ewaves\dbadd.m" />
+    <Content Include="em_general\ewaves\dbadd2.m" />
+    <Content Include="em_general\ewaves\dbp.m" />
+    <Content Include="em_general\ewaves\dbp2.m" />
+    <Content Include="em_general\ewaves\dbz.m" />
+    <Content Include="em_general\ewaves\dbz2.m" />
+    <Content Include="em_general\ewaves\dguide.m" />
+    <Content Include="em_general\ewaves\diffint.m" />
+    <Content Include="em_general\ewaves\diffr.m" />
+    <Content Include="em_general\ewaves\dipdir.m" />
+    <Content Include="em_general\ewaves\dipole.m" />
+    <Content Include="em_general\ewaves\dmax.m" />
+    <Content Include="em_general\ewaves\dnv.m" />
+    <Content Include="em_general\ewaves\dolph.m" />
+    <Content Include="em_general\ewaves\dolph2.m" />
+    <Content Include="em_general\ewaves\dolph3.m" />
+    <Content Include="em_general\ewaves\dsinc.m" />
+    <Content Include="em_general\ewaves\dslab.m" />
+    <Content Include="em_general\ewaves\dtft.m" />
+    <Content Include="em_general\ewaves\dualband.m" />
+    <Content Include="em_general\ewaves\dualbw.m" />
+    <Content Include="em_general\ewaves\ellipE.m" />
+    <Content Include="em_general\ewaves\ellipK.m" />
+    <Content Include="em_general\ewaves\ellipse.m" />
+    <Content Include="em_general\ewaves\etac.m" />
+    <Content Include="em_general\ewaves\ewa_license.m" />
+    <Content Include="em_general\ewaves\fcs.m" />
+    <Content Include="em_general\ewaves\fcs2.m" />
+    <Content Include="em_general\ewaves\flip.m" />
+    <Content Include="em_general\ewaves\fresnel.m" />
+    <Content Include="em_general\ewaves\frwrec.m" />
+    <Content Include="em_general\ewaves\g2z.m" />
+    <Content Include="em_general\ewaves\gain1d.m" />
+    <Content Include="em_general\ewaves\gain2d.m" />
+    <Content Include="em_general\ewaves\gain2s.m" />
+    <Content Include="em_general\ewaves\Gi.m" />
+    <Content Include="em_general\ewaves\gin.m" />
+    <Content Include="em_general\ewaves\gout.m" />
+    <Content Include="em_general\ewaves\gprop.m" />
+    <Content Include="em_general\ewaves\hband.m" />
+    <Content Include="em_general\ewaves\hbasis.m" />
+    <Content Include="em_general\ewaves\hcoupled.m" />
+    <Content Include="em_general\ewaves\hcoupled2.m" />
+    <Content Include="em_general\ewaves\hdelta.m" />
+    <Content Include="em_general\ewaves\heff.m" />
+    <Content Include="em_general\ewaves\hfield.m" />
+    <Content Include="em_general\ewaves\hgain.m" />
+    <Content Include="em_general\ewaves\hmat.m" />
+    <Content Include="em_general\ewaves\hopt.m" />
+    <Content Include="em_general\ewaves\hsigma.m" />
+    <Content Include="em_general\ewaves\hwrap.m" />
+    <Content Include="em_general\ewaves\I0.m" />
+    <Content Include="em_general\ewaves\imped.m" />
+    <Content Include="em_general\ewaves\imped2.m" />
+    <Content Include="em_general\ewaves\impedmat.m" />
+    <Content Include="em_general\ewaves\kernel.m" />
+    <Content Include="em_general\ewaves\king.m" />
+    <Content Include="em_general\ewaves\kingeval.m" />
+    <Content Include="em_general\ewaves\kingfit.m" />
+    <Content Include="em_general\ewaves\kingprime.m" />
+    <Content Include="em_general\ewaves\landenv.m" />
+    <Content Include="em_general\ewaves\lmatch.m" />
+    <Content Include="em_general\ewaves\lmin.m" />
+    <Content Include="em_general\ewaves\movies\dipmovie.m" />
+    <Content Include="em_general\ewaves\movies\grvmovie1.m" />
+    <Content Include="em_general\ewaves\movies\grvmovie2.m" />
+    <Content Include="em_general\ewaves\movies\pulse2movie.m" />
+    <Content Include="em_general\ewaves\movies\pulsemovie.m" />
+    <Content Include="em_general\ewaves\movies\RLCmovie.m" />
+    <Content Include="em_general\ewaves\movies\TDRmovie.m" />
+    <Content Include="em_general\ewaves\movies\xtalkmovie.m" />
+    <Content Include="em_general\ewaves\mstripa.m" />
+    <Content Include="em_general\ewaves\mstripr.m" />
+    <Content Include="em_general\ewaves\mstrips.m" />
+    <Content Include="em_general\ewaves\multibeam.m" />
+    <Content Include="em_general\ewaves\multidiel.m" />
+    <Content Include="em_general\ewaves\multidiel1.m" />
+    <Content Include="em_general\ewaves\multidiel2.m" />
+    <Content Include="em_general\ewaves\multiline.m" />
+    <Content Include="em_general\ewaves\n2r.m" />
+    <Content Include="em_general\ewaves\nfcirc.m" />
+    <Content Include="em_general\ewaves\nfig.m" />
+    <Content Include="em_general\ewaves\omniband.m" />
+    <Content Include="em_general\ewaves\omniband2.m" />
+    <Content Include="em_general\ewaves\onesect.m" />
+    <Content Include="em_general\ewaves\p2c.m" />
+    <Content Include="em_general\ewaves\pfield.m" />
+    <Content Include="em_general\ewaves\pi2t.m" />
+    <Content Include="em_general\ewaves\pmat.m" />
+    <Content Include="em_general\ewaves\pmatch.m" />
+    <Content Include="em_general\ewaves\poly2.m" />
+    <Content Include="em_general\ewaves\prol.m" />
+    <Content Include="em_general\ewaves\prolmat.m" />
+    <Content Include="em_general\ewaves\quadr.m" />
+    <Content Include="em_general\ewaves\quadr2.m" />
+    <Content Include="em_general\ewaves\quadrs.m" />
+    <Content Include="em_general\ewaves\quadrs2.m" />
+    <Content Include="em_general\ewaves\qwt1.m" />
+    <Content Include="em_general\ewaves\qwt2.m" />
+    <Content Include="em_general\ewaves\qwt3.m" />
+    <Content Include="em_general\ewaves\r2d.m" />
+    <Content Include="em_general\ewaves\r2n.m" />
+    <Content Include="em_general\ewaves\resonant.m" />
+    <Content Include="em_general\ewaves\rhombic.m" />
+    <Content Include="em_general\ewaves\scan.m" />
+    <Content Include="em_general\ewaves\sector.m" />
+    <Content Include="em_general\ewaves\sgain.m" />
+    <Content Include="em_general\ewaves\sgcirc.m" />
+    <Content Include="em_general\ewaves\Si.m" />
+    <Content Include="em_general\ewaves\sinhc.m" />
+    <Content Include="em_general\ewaves\smat.m" />
+    <Content Include="em_general\ewaves\smatch.m" />
+    <Content Include="em_general\ewaves\smith.m" />
+    <Content Include="em_general\ewaves\smithcir.m" />
+    <Content Include="em_general\ewaves\snel.m" />
+    <Content Include="em_general\ewaves\snv.m" />
+    <Content Include="em_general\ewaves\sparam.m" />
+    <Content Include="em_general\ewaves\sqrte.m" />
+    <Content Include="em_general\ewaves\steer.m" />
+    <Content Include="em_general\ewaves\stub1.m" />
+    <Content Include="em_general\ewaves\stub2.m" />
+    <Content Include="em_general\ewaves\stub3.m" />
+    <Content Include="em_general\ewaves\swr.m" />
+    <Content Include="em_general\ewaves\t2pi.m" />
+    <Content Include="em_general\ewaves\taylor1n.m" />
+    <Content Include="em_general\ewaves\taylor1p.m" />
+    <Content Include="em_general\ewaves\taylorbw.m" />
+    <Content Include="em_general\ewaves\traveling.m" />
+    <Content Include="em_general\ewaves\tsection.m" />
+    <Content Include="em_general\ewaves\twosect.m" />
+    <Content Include="em_general\ewaves\uniform.m" />
+    <Content Include="em_general\ewaves\upulse.m" />
+    <Content Include="em_general\ewaves\ustep.m" />
+    <Content Include="em_general\ewaves\vee.m" />
+    <Content Include="em_general\ewaves\ville.m" />
+    <Content Include="em_general\ewaves\vprop.m" />
+    <Content Include="em_general\ewaves\wavenum.m" />
+    <Content Include="em_general\ewaves\woodward.m" />
+    <Content Include="em_general\ewaves\yagi.m" />
+    <Content Include="em_general\ewaves\z2g.m" />
+    <Content Include="em_general\ewaves\zprop.m" />
+    <Content Include="em_general\gaussianbeam\GBPROP.m" />
+    <Content Include="em_general\rfwave\cfresnel.m" />
+    <Content Include="em_general\rfwave\ci.m" />
+    <Content Include="em_general\rfwave\collin.m" />
+    <Content Include="em_general\rfwave\corner.m" />
+    <Content Include="em_general\rfwave\cylcav.m" />
+    <Content Include="em_general\rfwave\cylwg.m" />
+    <Content Include="em_general\rfwave\darray.m" />
+    <Content Include="em_general\rfwave\dbstub.m" />
+    <Content Include="em_general\rfwave\dbstubs.m" />
+    <Content Include="em_general\rfwave\dipimp.m" />
+    <Content Include="em_general\rfwave\dipole.m" />
+    <Content Include="em_general\rfwave\fdipole.m" />
+    <Content Include="em_general\rfwave\fdipoles.m" />
+    <Content Include="em_general\rfwave\friis.m" />
+    <Content Include="em_general\rfwave\gmatch.m" />
+    <Content Include="em_general\rfwave\gmatchs.m" />
+    <Content Include="em_general\rfwave\hata.m" />
+    <Content Include="em_general\rfwave\helical.m" />
+    <Content Include="em_general\rfwave\helicals.m" />
+    <Content Include="em_general\rfwave\impcol.m" />
+    <Content Include="em_general\rfwave\larray.m" />
+    <Content Include="em_general\rfwave\logpers.m" />
+    <Content Include="em_general\rfwave\mstrip.m" />
+    <Content Include="em_general\rfwave\mutimp.m" />
+    <Content Include="em_general\rfwave\netmatch.m" />
+    <Content Include="em_general\rfwave\obloss.m" />
+    <Content Include="em_general\rfwave\omatch.m" />
+    <Content Include="em_general\rfwave\omatchs.m" />
+    <Content Include="em_general\rfwave\parab.m" />
+    <Content Include="em_general\rfwave\parabs.m" />
+    <Content Include="em_general\rfwave\parray.m" />
+    <Content Include="em_general\rfwave\qwtrafo.m" />
+    <Content Include="em_general\rfwave\qwtrafos.m" />
+    <Content Include="em_general\rfwave\radar.m" />
+    <Content Include="em_general\rfwave\radpat.m" />
+    <Content Include="em_general\rfwave\retcav.m" />
+    <Content Include="em_general\rfwave\retwg.m" />
+    <Content Include="em_general\rfwave\rfwave.m" />
+    <Content Include="em_general\rfwave\sfresnel.m" />
+    <Content Include="em_general\rfwave\si.m" />
+    <Content Include="em_general\rfwave\smithch.m" />
+    <Content Include="em_general\rfwave\stub.m" />
+    <Content Include="em_general\rfwave\stubs.m" />
+    <Content Include="em_general\rfwave\tmatch.m" />
+    <Content Include="em_general\rfwave\tmatchs.m" />
+    <Content Include="em_general\rfwave\tristub.m" />
+    <Content Include="em_general\rfwave\tristubs.m" />
+    <Content Include="em_general\rfwave\txline.m" />
+    <Content Include="em_general\rfwave\yagi.m" />
+    <Content Include="em_general\rfwave\zoimp.m" />
+    <Content Include="em_general\wirelesspower\Cavity Resonator One.jpg" />
+    <Content Include="em_general\wirelesspower\December Experiments\Power_over_distance.m" />
+    <Content Include="em_general\wirelesspower\downloader.jpg" />
+    <Content Include="em_general\wirelesspower\Evanesce_Function.m" />
+    <Content Include="em_general\wirelesspower\Figure 2.jpg" />
+    <Content Include="em_general\wirelesspower\Figure 6.jpg" />
+    <Content Include="em_general\wirelesspower\Freq_vs_evanescentRegion.m" />
+    <Content Include="em_general\wirelesspower\Freq_vs_Region.jpg" />
+    <Content Include="em_general\wirelesspower\Impedence_Effect_on_Power.jpg" />
+    <Content Include="em_general\wirelesspower\Impedence_Spectrum.m" />
+    <Content Include="em_general\wirelesspower\Impendance_State.jpg" />
+    <Content Include="em_general\wirelesspower\Multispectral Power.jpg" />
+    <Content Include="em_general\wirelesspower\Optimal Evanescent Corridor.jpg" />
+    <Content Include="em_general\wirelesspower\Power_Spectrum.m" />
+    <Content Include="em_general\wirelesspower\Rx_Spiral.m" />
+    <Content Include="em_general\wirelesspower\Science Paper 2010\Conical Helices\spiral_with_logrise.m" />
+    <Content Include="em_general\wirelesspower\Science Paper 2010\Conical Helices\sydrandria_temp\Equation_11.m" />
+    <Content Include="em_general\wirelesspower\Science Paper 2010\Conical Helices\sydrandria_temp\template.m" />
+    <Content Include="em_general\wirelesspower\Science Paper 2010\Figure 2.png" />
+    <Content Include="em_general\wirelesspower\Science Paper 2010\Figure 3.tif" />
+    <Content Include="em_general\wirelesspower\Science Paper 2010\Figure 4.png" />
+    <Content Include="em_general\wirelesspower\Science Paper 2010\Power_over_distance.m" />
+    <Content Include="em_general\wirelesspower\Science Paper 2010\Power_Spectrum_Sampler.m" />
+    <Content Include="em_general\wirelesspower\Science Paper 2010\Summation_of_Harmonics.m" />
+    <Content Include="em_general\wirelesspower\Science Paper 2010\Varying Voltages at Two Meters.m" />
+    <Content Include="em_general\wirelesspower\Science Paper 2010\Varying_Voltages_at_Two_Meters.m" />
+    <Content Include="em_general\wirelesspower\Science Paper 2010\Varying_voltages_over_two_meters_range.m" />
+    <Content Include="em_general\wirelesspower\Spiral_Cavity_Resonator.m" />
+    <Content Include="em_general\wirelesspower\temp\Figure 5_Rx.jpg" />
+    <Content Include="em_general\wirelesspower\The Real Scam of It All.jpg" />
+    <Content Include="em_general\wirelesspower\Tx_Spiral.m" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Antennas\spiral\mesh\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lab-sharp\LabSharp\LabSharp.csproj">
+      <Project>{5EB8EB8B-5765-4982-B2DE-AF843C4B0130}</Project>
+      <Name>LabSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

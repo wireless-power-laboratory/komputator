@@ -1,0 +1,5 @@
+﻿2 issues found
+  Potential Code Quality Issues (2 issues)
+    <DESFireEV2_Testbench_package>\Testsets\DataManipulation\GetVersionTest.cs (2 issues)
+      Access to disposed closure
+      Access to disposed closure

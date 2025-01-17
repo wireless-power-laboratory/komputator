@@ -1,0 +1,17 @@
+﻿Depends on which PDEs you want to solve and how you want to approach them.
+
+Every approach that I know of will require linear algebra. You'll want to find a good matrix package for .NET, the best you can find, one that can handle 
+	sparse matricies efficiently.
+
+Linear elliptic (steady state diffusion), parabolic (transient diffusion), and hyperbolic (F= MA dynamic) PDEs require slightly different approaches.
+
+All three of these PDEs can use classical finite difference, finite element (weighted residual), or boundary element (Green's functions) to create the 
+	system matrix you'd like to solve. General non-linear PDEs are probably best attacked using a finite element/weighted residual technique.
+
+But the parabolic and hyperbolic PDFs will turn into coupled sets of ODEs once you discretize them. You have to do transient integration to repeatedly 
+	solve the time evolution. Parabolic ODEs are first order in time; hyperbolic ODEs are second order in time.
+
+----
+
+On the Del operator: http://users.aber.ac.uk/ruw/teach/260/del.php
+Follow the solution sequence.
